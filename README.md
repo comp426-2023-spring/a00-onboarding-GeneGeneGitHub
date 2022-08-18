@@ -14,7 +14,7 @@ If you clone this repo directly, it will not be added to the organization as an 
 
 Follow the appropriate directions below relative to your operating system. 
 
-If you are a Windows user, you will becom a Linux user by installing the Windows Subsystem for Linux (WSL)
+If you are a Windows user, you will becom a Linux user by installing the Windows Subsystem for Linux (WSL)!
 
 ### Mac users
 

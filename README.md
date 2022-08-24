@@ -10,7 +10,7 @@ Use the GitHub classroom link instead: https://classroom.github.com/a/TLIqqWVj
 
 If you clone this repo directly, it will not be added to the organization as an individual repo associated with your account and you will not be able to push to it.
 
-## Instructions
+# Instructions
 
 Follow the appropriate directions below relative to your operating system. 
 

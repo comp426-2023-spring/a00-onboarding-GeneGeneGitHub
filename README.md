@@ -242,7 +242,7 @@ $ cd a00-GHUSERNAME
 
 ### Run a script and then push the output back to GitHub
 
-!. Run the script in your newly-cloned repo:
+1. Run the script in your newly-cloned repo:
 
 ```
 $ bash ./install_check.sh

@@ -191,7 +191,7 @@ Or go to this URL: https://github.com/settings/keys
 
 5. Click the green button that reads "New SSH key."
 
-6. Past your PUBLIC key into the "Key" field and add a name for the key in the "Title" field.
+6. Paste your PUBLIC key into the "Key" field and add a name for the key in the "Title" field.
 
 7. Press the "Add SSH Key" button to save the key in your account.
 

@@ -6,7 +6,7 @@ You will be doing all of the install in a command shell/terminal emulator.
 
 ## DO NOT CLONE THIS REPOSITORY DIRECTLY
 
-Use the GitHub classroom link instead: https://classroom.github.com/a/TLIqqWVj
+Use the GitHub classroom link instead: https://classroom.github.com/a/sJ6op7w2
 
 If you clone this repo directly, it will not be added to the organization as an individual repo associated with your account and you will not be able to push to it.
 

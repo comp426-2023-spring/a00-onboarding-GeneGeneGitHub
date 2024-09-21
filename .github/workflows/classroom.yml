@@ -1,0 +1,45 @@
+name: Autograding Tests
+'on':
+- workflow_dispatch
+- repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Check for log file
+      id: check-for-log-file
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: Check for log file
+        setup-command: ''
+        command: ls
+        input: ''
+        expected-output: install_check.log
+        comparison-method: contains
+        timeout: 10
+        max-score: 50000
+    - name: Software Version
+      id: software-version
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Software Version
+        setup-command: ''
+        command: printf "GH Actions runner software versions\n\n"; printf "SYSTEM:\t$(uname
+          -a)\n"; printf "SHELL:\t[${SHELL}]\n"; printf "GIT:\t[$(which git)] $(git
+          --version)\n"; printf "CURL:\t[$(which curl)] $(curl --version | head -n
+          1)\n"; printf "NODE:\t[$(which node)] node $(node -v)\n"
+        timeout: 10
+    - name: Autograding Reporter
+      uses: classroom-resources/autograding-grading-reporter@v1
+      env:
+        CHECK-FOR-LOG-FILE_RESULTS: "${{steps.check-for-log-file.outputs.result}}"
+        SOFTWARE-VERSION_RESULTS: "${{steps.software-version.outputs.result}}"
+      with:
+        runners: check-for-log-file,software-version
